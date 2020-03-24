@@ -3,6 +3,8 @@
 echo "--- Removing any pre-installed ffmpeg and x264"
 sudo apt-get -qq remove ffmpeg x264 libx264-dev
 
+sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+
 function install_dependency {
     echo "--- Installing dependency: $1"
     sudo apt-get -y install $1
@@ -22,8 +24,8 @@ install_dependency libavformat-dev
 install_dependency libswscale-dev
 install_dependency libdc1394-22-dev
 install_dependency libxine2-dev
-install_dependency libgstreamer0.10-dev
-install_dependency libgstreamer-plugins-base0.10-dev
+install_dependency libgstreamer1.0-dev
+install_dependency libgstreamer-plugins-base1.0-dev
 install_dependency libv4l-dev
 install_dependency python-dev
 install_dependency python-numpy
