@@ -35,7 +35,7 @@ wget -c -O $downloadfile http://sourceforge.net/projects/opencvlibrary/files/$ve
 echo "--- Installing OpenCV" $version
 echo $downloadfile | grep ".zip"
 if [ $? -eq 0 ]; then
-    unzip $downloadfile opencv
+    unzip $downloadfile
 else
     tar -xvf $downloadfile
 fi
